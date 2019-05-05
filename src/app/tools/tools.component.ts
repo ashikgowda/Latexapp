@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { AddTextAreaService } from '../add-text-area.service';
 
 @Component({
   selector: 'app-tools',
@@ -7,10 +8,13 @@ import { Component, OnInit} from '@angular/core';
 })
 export class ToolsComponent implements OnInit {
 
-  constructor() { }
+  constructor(service:AddTextAreaService) { 
+    addTextArea:any() {
+      this.service.service.addTextArea();
+    }
+  }
 
   ngOnInit() {
   }
 
-  
 }
