@@ -9,9 +9,9 @@ import { AddTextAreaService } from '../add-text-area.service';
 export class ToolsComponent implements OnInit {
 
   constructor(service:AddTextAreaService) { 
-    addTextArea:any() {
+    /*addTextArea:any() {
       this.service.service.addTextArea();
-    }
+}*/
   }
 
   ngOnInit() {

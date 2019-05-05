@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { AddTextAreaService } from 'src/app/add-text-area.service';
 
 @Component({
   selector: 'app-tree',
@@ -12,20 +13,22 @@ export class TreeComponent implements OnInit {
   ngOnInit() {
   }
 
- chapterList:any = [];
- sectionList:any = [];
+  // public chapterList = [];
+  // public sectionList = [];
 
-  addChapter(){        
-      this.chapterList.push('text_area'+ (this.chapterList.length + 1));
-  }
-
-  addSection(){        
-    this.chapterList.push('text_area'+ (this.chapterList.length + 1));
+  addChapter(add: AddTextAreaService ) {
+  //this.chapterList.push('text_area'+ (this.chapterList.length + 1));
+  //public add : new AddTextAreaService();
+  add.addTextArea();
 }
-  removeTextArea(index){
-      this.chapterList.splice(index, 1);
-  }
 
+/*addSection(){
+  this.chapterList.push('text_area' + (this.chapterList.length + 1));
+}
+removeTextArea(index){
+  this.chapterList.splice(index, 1);
+}
+*/
 }
 
 
