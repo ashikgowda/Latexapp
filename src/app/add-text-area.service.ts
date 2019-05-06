@@ -1,19 +1,16 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AddTextAreaService {
-  public chapterList = [];
-  public sectionList = [];
-  addTextArea() {
-    this.chapterList.push('text_area' + (this.chapterList.length + 1));
+  event = new BehaviorSubject<string>('Click');
+  click = this.event.asObservable();
+  sendEvent() {
+    this.event.next('Click');
+    console.log('HAHA');
   }
-  addSection() {
-    this.chapterList.push('text_area' + (this.chapterList.length + 1));
-  }
-  removeTextArea(index) {
-    this.chapterList.splice(index, 1);
-  }
+
 
 }

@@ -1,5 +1,6 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AddTextAreaService } from '../add-text-area.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-tools',
@@ -8,13 +9,17 @@ import { AddTextAreaService } from '../add-text-area.service';
 })
 export class ToolsComponent implements OnInit {
 
-  constructor(service:AddTextAreaService) { 
-    /*addTextArea:any() {
-      this.service.service.addTextArea();
-}*/
+  event = new BehaviorSubject<string>('Click');
+  click = this.event.asObservable();
+  service = new AddTextAreaService();
+  constructor() {
+
   }
 
   ngOnInit() {
-  }
 
+  }
+  addTextArea() {
+   this.service.sendEvent();
+  }
 }
