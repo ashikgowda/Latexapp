@@ -1,0 +1,6 @@
+mat-tree-node{
+    align-content: flex-start;
+    background-color:yellow;
+    width:auto;    
+    height: inherit;
+}

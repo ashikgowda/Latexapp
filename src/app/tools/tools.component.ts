@@ -20,6 +20,6 @@ export class ToolsComponent implements OnInit {
 
   }
   addTextArea() {
-   this.service.sendEvent();
+    this.service.sendEvent();
   }
 }
