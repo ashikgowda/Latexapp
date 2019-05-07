@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AddTextAreaService } from 'src/app/add-text-area.service';
-import {ToolsComponent} from 'src/app/tools/tools.component';
+import { ToolsComponent } from 'src/app/tools/tools.component';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-tree',
@@ -9,9 +10,21 @@ import {ToolsComponent} from 'src/app/tools/tools.component';
 })
 export class TreeComponent implements OnInit {
 
-  constructor(temp: ToolsComponent) { }
+  item = 0;
+  subscription: Subscription;
+  constructor(private temp: AddTextAreaService) {
+
+  }
 
   ngOnInit() {
+    this.subscription = this.temp.click.subscribe();
+    this.changeDom();
+  }
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
+  changeDom() {
+    console.log('IS THIS WORKING');
   }
 
 }
