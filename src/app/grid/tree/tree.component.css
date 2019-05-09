@@ -3,7 +3,7 @@ mat-tree-node{
     width:auto;    
     height: inherit;
 }
-textarea{
+textarea {
     margin: 10px;
     min-width: 30px;
 }

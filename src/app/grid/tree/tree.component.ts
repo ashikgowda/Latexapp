@@ -26,9 +26,9 @@ export class FileFlatNode {
 const TREE_DATA = JSON.stringify(
   {
     "Introduction": "1. INTRODUCTION",
-    "SECTION":{
-      "PARAGRAPH ONE":"SOMETEXT",
-      "PATAGRAPH TWO":"SOMETEXT",
+    "SECTION": {
+      "PARAGRAPH ONE": "SOMETEXT",
+      "PATAGRAPH TWO": "SOMETEXT",
     }
   }
 );
