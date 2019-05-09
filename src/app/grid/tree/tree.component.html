@@ -5,15 +5,15 @@
     <label>{{node.filename|uppercase}}</label>
     <textarea value={{node.type}}></textarea>
   </mat-tree-node>
-
-  <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
-    <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.filename">
-      <mat-icon class="mat-icon-rtl-mirror">
-        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
-      </mat-icon>
-    </button>
-    <!--{{node.filename}} : {{node.type}}-->
-    <label>{{node.filename|uppercase}}</label>
-    <textarea value={{node.filename}}></textarea>   <!--I got this-->
-  </mat-tree-node>
+    <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+      <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.filename">
+        <mat-icon class="mat-icon-rtl-mirror">
+          {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+        </mat-icon>
+      </button>
+      <!--{{node.filename}} : {{node.type}}-->
+      <label>{{node.filename|uppercase}}</label>
+      <textarea matInput value={{node.filename}}></textarea>
+      <!--I got this-->
+    </mat-tree-node>
 </mat-tree>

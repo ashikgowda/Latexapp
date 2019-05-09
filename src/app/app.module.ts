@@ -11,9 +11,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule,MatCheckboxModule,MatMenuModule,MatSelectModule,MatIconModule,MatToolbarModule,MatGridListModule} from '@angular/material';
 import {MatTreeModule} from '@angular/material/tree';
 import '@angular/material/prebuilt-themes/deeppurple-amber.css';
-
-
 import { CommonModule } from '@angular/common';
+import {MatInputModule} from '@angular/material';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
@@ -39,6 +38,7 @@ import { ViewComponent } from './grid/view/view.component';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatMenuModule,
+    MatInputModule,
     MatSelectModule,
     MatTreeModule,
     MatButtonModule,
