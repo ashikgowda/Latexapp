@@ -26,9 +26,9 @@ export class FileFlatNode {
 const TREE_DATA = JSON.stringify(
   {
     "Introduction": "1. INTRODUCTION",
-    "SECTION": {
+    "1.1 Basic": { 
       "PARAGRAPH ONE": "The learning algorithm plays an important role in pattern classification particularlyif the image object varies its",
-      "PATAGRAPH TWO": "SOMETEXTLorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem  Ipsum  has  been  the  industry’s  standard  dummy  text  ever  since  the1500s,  when  an  unknown  printer  took  a  galley  of  type  and  scrambled  it  tomake a type specimen book.  It has survived not only five centuries, but alsothe  leap  into  electronic  typesetting,  remaining  essentially  unchanged.   It  waspopularised in the 1960s with the release of Letraset sheets containing LoremIpsum passages, and more recently with desktop publishing software like AldusPageMaker including versions of Lorem Ipsum.",
+      "PATAGRAPH TWO": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem  Ipsum  has  been  the  industry’s  standard  dummy  text  ever  since  the1500s,  when  an  unknown  printer  took  a  galley  of  type  and  scrambled  it  tomake a type specimen book.  It has survived not only five centuries, but alsothe  leap  into  electronic  typesetting,  remaining  essentially  unchanged.   It  waspopularised in the 1960s with the release of Letraset sheets containing LoremIpsum passages, and more recently with desktop publishing software like AldusPageMaker including versions of Lorem Ipsum.",
     }
   }
 );
