@@ -1,0 +1,9 @@
+mat-tree-node{
+    align-content: flex-start;
+    width:auto;    
+    height: inherit;
+}
+textarea {
+    margin: 10px;
+    min-width: 30px;
+}
