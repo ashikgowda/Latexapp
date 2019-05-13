@@ -8,7 +8,7 @@ textarea {
     min-width: 30px;
 } */
 
-..btn {
+.btn {
   
     border: none;
     color: white; 
@@ -28,12 +28,12 @@ textarea {
     width:100%;
       }
  
-  #wrapper{
+  /* #wrapper{
     margin-left:auto;
     margin-right:auto;
     height:auto; 
     width:auto;
-      } 
+      } */
 
   #inner1{
     width:100%; 
@@ -43,11 +43,11 @@ textarea {
     height:28px;
     
       }
-#inner2{
 
 
 
-}
+
+
 
   
   

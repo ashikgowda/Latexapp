@@ -1,5 +1,5 @@
 import { FlatTreeControl } from '@angular/cdk/tree';
-import { Component, Injectable } from '@angular/core';
+import { Component,Renderer2,ElementRef, Injectable } from '@angular/core';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
 import { BehaviorSubject, Observable, of as observableOf } from 'rxjs';
@@ -95,6 +95,10 @@ import { BehaviorSubject, Observable, of as observableOf } from 'rxjs';
 export class TreeComponent {
 
   public greeting="";
+  public chapters:Array<any>=[];
+  constructor(private renderer:Renderer2, private el: ElementRef ) {}
+
+
   // treeControl: FlatTreeControl<FileFlatNode>;
   // treeFlattener: MatTreeFlattener<FileNode, FileFlatNode>;
   // dataSource: MatTreeFlatDataSource<FileNode, FileFlatNode>;
@@ -120,9 +124,76 @@ export class TreeComponent {
 
   // hasChild = (_: number, _nodeData: FileFlatNode) => _nodeData.expandable;
 
-  public  addTextArea(event){
+  public  addChapter(){
     console.log(event);
-    this.greeting='welcome';}
+    this.greeting='Added Chapter';
+
+
+    const div = this.renderer.createElement('div');
+    const input = this.renderer.createElement('input');
+
+    this.renderer.appendChild(div, input);
+
+    this.renderer.addClass(div, 'col-md-6');
+    this.renderer.addClass(div, 'col-sm-6');
+    this.renderer.addClass(div, 'col-xs-12');
+
+    console.log('cross passes the code');
+    this.renderer.addClass(input, 'form-control');
+    this.renderer.addClass(input, 'col-md-7');
+    this.renderer.addClass(input, 'col-xs-12');
+
+    const textboxes = document.getElementById('inner2');
+
+    this.renderer.appendChild(textboxes, div);
+}
+public  addSection(){
+  console.log(event);
+  
+  this.greeting='Added Section';
+
+  const div = this.renderer.createElement('div');
+  const input = this.renderer.createElement('input');
+
+  this.renderer.appendChild(div, input);
+
+  this.renderer.addClass(div, 'col-md-6');
+  this.renderer.addClass(div, 'col-sm-6');
+  this.renderer.addClass(div, 'col-xs-12');
+
+  console.log('cross passes the code');
+  this.renderer.addClass(input, 'form-control');
+  this.renderer.addClass(input, 'col-md-7');
+  this.renderer.addClass(input, 'col-xs-12');
+
+  const textboxes = document.getElementById('inner2');
+
+  this.renderer.appendChild(textboxes, div);
+}
+
+public  addSubsection(){
+  console.log(event);
+  this.greeting='Added sub section';
+
+
+  const div = this.renderer.createElement('div');
+  const input = this.renderer.createElement('input');
+
+  this.renderer.appendChild(div, input);
+
+  this.renderer.addClass(div, 'col-md-6');
+  this.renderer.addClass(div, 'col-sm-6');
+  this.renderer.addClass(div, 'col-xs-12');
+
+  console.log('cross passes the code');
+  this.renderer.addClass(input, 'form-control');
+  this.renderer.addClass(input, 'col-md-7');
+  this.renderer.addClass(input, 'col-xs-12');
+
+  const textboxes = document.getElementById('inner2');
+
+  this.renderer.appendChild(textboxes, div);
+}
   }
     
 
