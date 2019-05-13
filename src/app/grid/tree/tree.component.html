@@ -1,7 +1,7 @@
-<mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+<!-- <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
   <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding>
     <button mat-icon-button disabled></button>
-    <!--{{node.filename}} : {{node.type}}-->
+  
     <label>{{node.filename|uppercase}}</label>
     <textarea value={{node.type}}></textarea>
   </mat-tree-node>
@@ -11,12 +11,12 @@
           {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
         </mat-icon>
       </button>
-      <!--{{node.filename}} : {{node.type}}-->
+     
       <label>{{node.filename|uppercase}}</label>
       <textarea matInput value={{node.filename}}></textarea>
-      <!--I got this-->
+   
     </mat-tree-node>
-</mat-tree>
+</mat-tree> -->
 <!---<form action='process_request' method="POST" ondblclick="addSection()" > 
   <label>Section</label>
   <textarea id="area"></textarea>
@@ -33,3 +33,38 @@
   }
 </script>
 -->
+<div id="wrapper">
+<div id="inner1">
+  <nav class="navbar navbar-expand-xl bg-light navbar-light">
+    <div class="btn-group btn-group-sm.navbar-nav-expand-xl ">
+      <button type="button" class="btn btn-primary" disabled="true">New</button>
+      <button type="button" class="btn btn-primary" disabled="true" >Open</button>
+      <button type="button" class="btn btn-primary"><i class="fa fa-save"></i>Save</button>
+      <button type="button" class="btn btn-primary" (click)="addTextArea($event)">Chapter</button>
+      <button type="button" class="btn btn-primary">Section</button>
+      <button type="button" class="btn btn-primary">Subsection</button>
+      <button type="button" class="btn btn-primary"><i class="fa fa-table" disabled="true"></i>Table</button>
+      <button type="button" class="btn btn-primary"><i class="fa fa-image" disabled="true"></i>Image</button>
+      <button type="button" class="btn btn-primary"><i class="fa fa-bold"></i></button>
+      <button type="button" class="btn btn-primary"><i class="fa fa-italic"></i></button>
+      <button type="button" class="btn btn-primary"><i class="fa fa-underline"></i></button>
+      <!-- <button type="button" class="btn btn-primary"><i class="fa fa-superscript"></i></button>
+      <button type="button" class="btn btn-primary"><i class="fa fa-subscript"></i></button>
+       -->
+      <button type="button" class="btn btn-primary"><i class="fa fa-undo" disabled="true"></i></button>
+      <button type="button" class="btn btn-primary"><i class="fa fa-repeat" disabled="true"></i></button>
+      <button type="button" class="btn btn-primary"><i class="fa fa-cut" disabled="true"></i></button>
+      <button type="button" class="btn btn-primary"><i class="fa fa-copy" disabled="true"></i></button>
+      <button type="button" class="btn btn-primary"><i class="fa fa-paste" disabled="true"></i></button>
+      <button type="button" class="btn btn-primary"><i class="fa fa-list" ></i></button>
+      <button type="button" class="btn btn-primary"><i class=""></i>List</button>
+      <button type="button" class="btn btn-success">Generate Report</button>
+          </div>
+  </nav>
+    <div id="inner2">
+    {{greeting}}
+    </div>
+  </div>
+</div>
+  
+    
